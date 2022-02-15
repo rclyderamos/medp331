@@ -1,4 +1,4 @@
-const myTitle = 'A Beautiful Poem'
+const myTitle = 'words words words'
 let myObject = {'adjectives': ['verdant', 'powerful', 'afraid'], 'nouns': ['rock', 'mountain', 'tree', 'blade of grass']}
 let myArticleArray = ['The', 'an', 'a']
 
