@@ -1,6 +1,6 @@
-const myTitle = 'words words words'
-let myObject = {'adjectives': ['verdant', 'powerful', 'afraid'], 'nouns': ['rock', 'mountain', 'tree', 'blade of grass']}
-let myArticleArray = ['The', 'an', 'a']
+const myTitle = 'nighttime'
+let myObject = {'adjectives': ['sleepy', 'dark', 'comfy', 'foggy'], 'nouns': ['daze', 'bed', 'night', 'moon']}
+let myArticleArray = ['the', 'a']
 
 function returnPoem(title, article, noun, adjective) {
   return title + ': ' + article + ' ' + adjective + ' ' + noun
