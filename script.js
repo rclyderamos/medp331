@@ -26,7 +26,7 @@ function forLoopPoem(title, lines) {
 
 // while loop poem:
 let counter = 0
-while(counter < 4) {
+while(counter < 6) {
   W(getRandomItem(myObject.lines))
   counter++
 }
