@@ -45,3 +45,7 @@ a:visited {
    font-family: Georgia, Times, "Times New Roman", serif;
    text-align: center;
 }
+
+#brick {
+  background-color: #D0D6DF;
+}
