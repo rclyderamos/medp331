@@ -12,6 +12,28 @@
 
 	<link rel="stylesheet" href="css.css">
 	<script src="utilities.js"></script>
+	<style>
+		.tile {
+			height: 100px;
+			width: 100px;
+			line-height: 100px;
+			float: left;
+			text-align: center;
+			color: #dcdcdc;
+			background: #dcdcdc;
+			border-style: solid;
+			border-color: #949494;
+			border-width: 2px 1px;
+		}
+		.container{
+			align: center;
+		}
+		.spacer{
+			background-color: #ebeff5;
+			float: right;
+
+		}
+	</style>
 </head>
 <body>
 	<header id="home">
@@ -24,16 +46,49 @@
 			<a href="assignments.html">assignments</a> &nbsp; &nbsp;
 		</nav>
 	</header>
+	<br>
 
-    <p>
-      <div class="tile" id="brick" >
-        asfsd
-      </div> <<div class="tile">
+	<div id="container">
+	 <div class="tile">poems</div>
+	 <div class="tile">are</div>
+	 <div class="tile">built</div>
+	 <div class="tile">line</div>
+	 <div class="tile">by</div>
+	 <div class="tile">line</div>
+	 <div class="tile">poems</div>
+	 <div class="tile">are</div>
+	 <div class="tile">built</div>
+	 <div class="tile">line</div>
+	 <div class="tile">by</div>
+	 <div class="tile">line</div>
+ </div>
 
-      </div>
-    </p>
+	<script>
+		let z = 1;
+		let x = 220;
+		let y = 61;
+
+		function change(){
+			if (z < 1) {
+				z + 1;
+				return y;
+			}
+			else if (z > 1) {
+				z - 1;
+				return x;
+			}
+		}
 
 
+		function random(number) {
+			return Math.floor(Math.random()*number);
+		}
 
-    <br>
-    <div>
+		function bgChange() {
+			const rndCol = `rgb(${change()}, ${change()}, ${change()})`;
+			return rndCol;
+		}
+
+		const container = document.querySelector('#container');
+		container.addEventListener('mouseover', event => event.target.style.backgroundColor = bgChange());
+	</script>
