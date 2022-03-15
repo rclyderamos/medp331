@@ -64,24 +64,17 @@ a:visited {
 }
 
 .click-me1 {
-  float: left;
-  margin-top: 55vh;
-  margin-left: 40%;
+  margin-top: 3vh;
   color: #2c4a31;
 }
-.result1 {
-  color: #2c4a31;
-}
-
 .click-me2 {
-  float:left;
-  margin-top: 55vh;
+  margin-top: 3vh;
   margin-left: 6vw;
   color: #2c4a31;
 }
-
-.result2 {
+#result {
   color: #2c4a31;
+  margin-top: 50vh;
 }
 
 #card{
@@ -91,9 +84,10 @@ a:visited {
   border-color: #8e959c;
   height: 300px;
   width:180px;
-  float: right;
+  float: left;
   text-align: center;
-
+  margin-left: 23vw;
+  margin-top: 10vh;
 
 
 }

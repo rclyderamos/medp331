@@ -1,12 +1,13 @@
 $(function() {
 
 
-  $("#click-me1").click(function() {
-    $(".result").text("You clicked me!")
+  $(".click-me1").click(function() {
+    $("#result").text("you chose higher")
+
   })
 
-  $("#click-me2").click(function() {
-    $(".result").text("You clicked me!")
+  $(".click-me2").click(function() {
+    $("#result").text("you chose lower")
   })
 
   $.ajax({
