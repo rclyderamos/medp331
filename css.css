@@ -69,12 +69,14 @@ a:visited {
 }
 .click-me2 {
   margin-top: 3vh;
-  margin-left: 6vw;
+  color: #2c4a31;
+}
+.reset{
   color: #2c4a31;
 }
 #result {
   color: #2c4a31;
-  margin-top: 50vh;
+  margin-top: 45vh;
 }
 
 #card{
@@ -88,6 +90,4 @@ a:visited {
   text-align: center;
   margin-left: 23vw;
   margin-top: 10vh;
-
-
 }

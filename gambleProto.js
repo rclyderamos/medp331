@@ -8,12 +8,17 @@ $(function() {
 
   $(".click-me2").click(function() {
     $("#result").text("you chose lower")
-  })
+    })
 
-  $.ajax({
-    'url' : 'https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1',
-    'deck_count' : 'post',
-    'dataType': 'json'
+
+  let reset = 'deck_count=1 '
+  let deckNumber = ''
+
+  $(".reset").click(function () {
+    $.getJSON(`https://deckofcardsapi.com/api/deck/new/shuffle/?${reset}`, function(data) {
+          console.log('data: ', data)
+        })
+
   })
 
 })

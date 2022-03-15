@@ -12,6 +12,8 @@
 
 		<link rel="stylesheet" href="css.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="jquery.flip.min.js"></script>
 	</head>
 	<body>
 		<header id="home">
@@ -29,11 +31,21 @@
 				<div id="table">
 					<script src="gambleProto.js"></script>
 
-					<div id="card"><br>i am a card</div>
+					<div id="card">
+						<div class="cardFront"><br>i am the front of the card</div>
+						<div class="cardBack"><br>i am the back of the card</div>
+					</div>
 
 					<div id="result"> </div>
 					<button class="click-me1">higher</button>
+
+					<button class="reset">reset</button>
+
 					<button class="click-me2">lower</button>
+
+				</div>
+
+				<div id="datalog">
 
 				</div>
 		</div>
