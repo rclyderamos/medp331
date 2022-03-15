@@ -49,3 +49,51 @@ a:visited {
 #brick {
   background-color: #D0D6DF;
 }
+
+#table {
+  background-color: #9bbda1;
+  border-radius: 30px;
+  border-color: #496e50;
+  height: 60vh;
+  width: 60vw;
+  border-style: solid;
+  border-spacing: 25px;
+  margin-left: 17vw;
+  margin-top: 10px;
+
+}
+
+.click-me1 {
+  float: left;
+  margin-top: 55vh;
+  margin-left: 40%;
+  color: #2c4a31;
+}
+.result1 {
+  color: #2c4a31;
+}
+
+.click-me2 {
+  float:left;
+  margin-top: 55vh;
+  margin-left: 6vw;
+  color: #2c4a31;
+}
+
+.result2 {
+  color: #2c4a31;
+}
+
+#card{
+  background-color: #e3e3e3;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: #8e959c;
+  height: 300px;
+  width:180px;
+  float: right;
+  text-align: center;
+
+
+
+}
