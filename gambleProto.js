@@ -10,15 +10,58 @@ $(function() {
     $("#result").text("you chose lower")
     })
 
+/*  $(".start").click(
+    function draw(){
+        const pic=document.getElementById("pic");
+        fetch(`https://deckofcardsapi.com/api/deck/${deckid}/draw/?count=1`)
+            .then((response) => {
+                return response.json();
+            })
+            .then((drawjson) => {
+                console.log(drawjson);
+                let cards=drawjson.cards[0];
+                pic.src=cards.image;
+            })
+            .catch((err) => {
+                // handle errors
+            });
+    })*/
 
-  let reset = 'deck_count=1 '
-  let deckNumber = ''
 
-  $(".reset").click(function () {
-    $.getJSON(`https://deckofcardsapi.com/api/deck/new/shuffle/?${reset}`, function(data) {
-          console.log('data: ', data)
+    $(".reset").click(function(){
+      location.reload();
+    })
+
+
+  const getcard = document.querySelector(".getcard");
+fetch("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
+    .then((response) => {
+        return response.json();
+    })
+    .then((cardjson) => {
+        console.log(cardjson);
+        deckid=cardjson.deck_id;
+    })
+    .catch((err) => {
+        // handle errors
+    });
+
+getcard.onclick=draw;
+
+function draw(){
+    const pic=document.getElementById("pic");
+    fetch(`https://deckofcardsapi.com/api/deck/${deckid}/draw/?count=1`)
+        .then((response) => {
+            return response.json();
         })
-
-  })
+        .then((drawjson) => {
+            console.log(drawjson);
+            let cards=drawjson.cards[0];
+            pic.src=cards.image;
+        })
+        .catch((err) => {
+            // handle errors
+        });
+}
 
 })
