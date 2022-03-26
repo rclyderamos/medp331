@@ -1,23 +1,29 @@
 $(function() {
 
+  var messages = {
+      lower: 'you chose lower',
+      higher: 'you chose higher',
+      win: 'you won',
+      correct: 'correct!',
+      incorrect: 'oops, incorrect. click reset to start again',
+  };
 
-  $(".click-me1").click(function() {
-    $("#result").text("you chose higher")
-  })
+  var cards = [{'2': 1}, {'3': 2}, {'4': 3}, {'5': 4},
+  {'6': 5}, {'7': 6}, {'8': 7}, {'9': 8}, {'10': 9},
+  {'JACK': 10}, {'QUEEN': 11}, {'KING': 12}, {'ACE': 13}];
+
+  $(".click-me1").click(
+    function() {$("#result").text("you chose higher");}
+    
+  );
 
   $(".click-me2").click(function() {
     $("#result").text("you chose lower")
-    })
+  });
 
   $(".reset").click(function(){
     location.reload();
-  })
-
-
-  $(".start").click()
-
-
-
+  });
 
   const getcard = document.querySelector(".getcard");
 fetch("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
@@ -28,9 +34,6 @@ fetch("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
         console.log(cardjson);
         deckid=cardjson.deck_id;
     })
-    .catch((err) => {
-        // handle errors
-    });
 
 getcard.onclick=draw;
 
@@ -45,9 +48,16 @@ function draw(){
             let cards=drawjson.cards[0];
             pic.src=cards.image;
         })
-        .catch((err) => {
-            // handle errors
-        });
 }
+/*
+var valueORG =
+var valueNXT
 
+function compare(){
+  var valueORG
+  var valueNXT
+
+
+}
+*/
 })

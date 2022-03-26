@@ -73,6 +73,7 @@ a:visited {
   color: #2c4a31;
 }
 .reset{
+
   color: #2c4a31;
 }
 
@@ -82,20 +83,12 @@ a:visited {
 
 #result {
   color: #2c4a31;
+  margin-top: 3vh;
   text-align:center;
   height: 12px;
-  margin-top: 45vh;
 }
 
-#card{
-  background-color: #e3e3e3;
-  border-style: solid;
-  border-radius: 15px;
-  border-color: #8e959c;
-  height: 300px;
-  width:180px;
-  float: left;
+#pic{
   text-align: center;
-  margin-left: 23vw;
-  margin-top: 10vh;
+  margin-top: 3vh;
 }
