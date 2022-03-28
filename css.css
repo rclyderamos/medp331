@@ -61,10 +61,11 @@ a:visited {
   margin-left: 17vw;
   text-align: center;
   margin-top: 10px;
+  min-height: 500px;
 
 }
 
-.click-me1 {
+.clickme1 {
   margin-top: 3vh;
   color: #2c4a31;
 }
