@@ -98,15 +98,24 @@ $(function() {
     'Your life will get more and more exciting.',
     'Your love life will be happy and harmonious.']}
 
-    $(".clickme1").click(function(){
-      $(".results").
-    })
+  $(".clickme1").click(function(){
+    let counter = 0
+    while(counter < 1) {
+      W(getRandomItem(myObject.fortunes))
+      counter++
+    }
+    function getRandomItem(array) {
+      return array[Math.floor(Math.random()*array.length)]
+    }
+  })
+
   $(".reset").click(function(){
     location.reload();
   });
 
   const getcard = document.querySelector(".getcard");
-  const result = document.querySelector(".result");
+  const result = document.querySelector("#result");
+  const clickme1 = document.querySelector(".clickme1");
 fetch("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
     .then((response) => {
         return response.json();
@@ -131,12 +140,9 @@ function draw(){
         })
 
 }
-let counter = 0
-while(counter < 1) {
-  W(getRandomItem(myObject.fortunes))
-  counter++
-}
-function getRandomItem(array) {
-  return array[Math.floor(Math.random()*array.length)]
-}
+
+
+
+
+
 })
